@@ -1,0 +1,94 @@
+{
+  "header": {
+    "title": "Viksit Bharat",
+    "subtitle": "Bridging Technology Gap",
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "categories": "Categories",
+      "contact": "Contact",
+      "getSupport": "Get Support"
+    },
+    "categories": {
+      "shopkeepers": "Shopkeepers",
+      "elderly": "Elderly",
+      "farmers": "Farmers",
+      "workers": "Workers",
+      "women": "Women"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Empowering Digital India for Everyone",
+      "subtitle": "SewaSetu - Technology for All. Bridging the technology gap across all communities - from shopkeepers to farmers, elderly to workers. Building a truly inclusive digital ecosystem.",
+      "exploreBtn": "Explore Categories",
+      "learnBtn": "Learn More",
+      "techForAll": "Technology for All",
+      "techForAllDesc": "Enabling every citizen with digital tools and knowledge"
+    },
+    "about": {
+      "title": "Building Viksit Bharat Through Digital Inclusion",
+      "subtitle": "Supporting India's vision to become a developed nation by 2047 through inclusive digital transformation",
+      "challengeTitle": "The Digital Divide Challenge",
+      "challengeText1": "While India leads the world in digital innovation, 70% of our rural population still lacks meaningful access to digital services. This gap prevents millions from participating in the digital economy.",
+      "challengeText2": "From elderly citizens struggling with banking apps to farmers missing market price updates, from shopkeepers unable to adopt digital payments to workers missing job opportunities - the digital divide affects every community.",
+      "challengeText3": "Viksit Bharat can only be achieved when every Indian has the tools and knowledge to thrive in the digital age.",
+      "missionTitle": "Our Mission",
+      "mission1": "Bridge the digital gap across all communities",
+      "mission2": "Provide technology in local languages",
+      "mission3": "Empower every citizen with digital tools",
+      "whyTitle": "Why SewaSetu?",
+      "whyDesc": "Tailored solutions for each community's unique needs - from UPI training for shopkeepers to health services for elderly citizens.",
+      "inclusiveTitle": "Inclusive Approach",
+      "inclusiveDesc": "Hindi and English support, simplified interfaces, and step-by-step guidance make technology accessible to all literacy levels.",
+      "communityTitle": "Community First",
+      "communityDesc": "Understanding that each community has unique challenges - from farmers needing weather updates to women seeking safety tools."
+    },
+    "categories": {
+      "title": "Technology Solutions for Every Community",
+      "subtitle": "Tailored digital solutions addressing the unique needs of different segments of our society",
+      "shopkeepersDesc": "Enabling kirana stores with UPI payments, digital billing, and inventory management tools.",
+      "elderlyDesc": "Simplified technology training and healthcare digital services for senior citizens.",
+      "farmersDesc": "Weather updates, market prices, and agricultural tools.",
+      "workersDesc": "Skills training, job portals, and digital literacy.",
+      "womenDesc": "Digital empowerment, entrepreneurship, and safety tools.",
+      "othersTitle": "Others",
+      "othersDesc": "Get personalized support for your digital transformation journey.",
+      "learnMore": "Learn More",
+      "contactSupport": "Contact Support"
+    }
+  },
+  "shopkeepers": {
+    "title": "Digitize Your Kirana Store",
+    "subtitle": "Transform your traditional store into a tech-enabled business with UPI payments, digital billing, and modern customer service"
+  },
+  "elderly": {
+    "title": "Digital Services for Senior Citizens",
+    "subtitle": "Simplified technology training and healthcare digital solutions"
+  },
+  "farmers": {
+    "title": "Digital Tools for Farmers",
+    "subtitle": "Weather updates, market prices, and agricultural digital solutions"
+  },
+  "workers": {
+    "title": "Digital Opportunities for Workers",
+    "subtitle": "Job portals, skills training, and digital literacy programs"
+  },
+  "women": {
+    "title": "Digital Empowerment for Women",
+    "subtitle": "Entrepreneurship, safety tools, and digital empowerment solutions"
+  },
+  "contact": {
+    "title": "Get Support for Your Digital Journey",
+    "subtitle": "Our expert team is here to help you navigate the digital transformation.",
+    "helpline": "Free Support Helpline: 1800-XXX-XXXX",
+    "email": "Email: support@viksitbharat.gov.in",
+    "hours": "Monday to Saturday: 9 AM - 6 PM",
+    "requestSupport": "Request Support",
+    "namePlaceholder": "Your Name",
+    "phonePlaceholder": "Phone Number",
+    "categoryPlaceholder": "Select Category",
+    "messagePlaceholder": "How can we help you?",
+    "sendRequest": "Send Request"
+  }
+}
