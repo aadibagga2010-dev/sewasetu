@@ -30,7 +30,7 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-[#2a2c37] shadow-md sticky top-0 z-50">
+    <header className="bg-[#a1a3b3] shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo Section */}
