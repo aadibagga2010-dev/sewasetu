@@ -120,8 +120,7 @@ export default function Farmers() {
     }
   ];
 
-  export default function Farmers() {
-  const cropRecommendations = {
+   const cropRecommendations: Record<string, string> = {
     January: 'Wheat',
     February: 'Barley',
     March: 'Maize',
@@ -139,14 +138,12 @@ export default function Farmers() {
   const getCurrentMonthCrop = () => {
     const monthName = new Date().toLocaleString('default', { month: 'long' });
     return {
-      name: monthName,
-      crop: cropRecommendations[monthName] || 'No recommendation available'
+      month: monthName,
+      crop: cropRecommendations[monthName] ?? 'No recommendation available'
     };
   };
 
-  const { name: currentMonth, crop: bestCrop } = getCurrentMonthCrop();
-
-  // ...rest of your existing code
+  const { month: currentMonth, crop: bestCrop } = getCurrentMonthCrop();
 }
   return (
       {/* Weather Services */}
@@ -212,9 +209,7 @@ export default function Farmers() {
         </div>
       </section>
 
-    // Inside the return of your component
-const { name: currentMonth, crop: bestCrop } = getCurrentMonthCrop();
-
+    {/* Best Crop for the Month */}
 <section className="py-16 bg-[#2a2c37]">
   <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <h2 className="text-3xl font-bold text-white mb-4">Best Crop for {currentMonth}</h2>
@@ -223,7 +218,9 @@ const { name: currentMonth, crop: bestCrop } = getCurrentMonthCrop();
     </p>
     <div className="inline-block bg-[#3a3c47] border border-gray-600 p-6 rounded-lg shadow-md">
       <h3 className="text-2xl font-semibold text-green-400">{bestCrop}</h3>
-      <p className="text-gray-300 mt-2">Consider planting or preparing for this crop to optimize your yield.</p>
+      <p className="text-gray-300 mt-2">
+        Consider planting or preparing for this crop to optimize your yield.
+      </p>
     </div>
   </div>
 </section>
