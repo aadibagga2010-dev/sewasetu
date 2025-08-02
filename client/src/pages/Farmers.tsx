@@ -1,151 +1,13 @@
-import { Sprout, CloudSun, BarChart3, Tractor, GraduationCap, DollarSign, MapPin, Calendar, Phone, BookOpen, Users, Thermometer, Droplets, Bug, Package } from 'lucide-react';
+import {
+  Sprout, CloudSun, BarChart3, Tractor, GraduationCap, DollarSign, MapPin,
+  Calendar, Phone, BookOpen, Users, Thermometer, Droplets, Bug, Package
+} from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
 export default function Farmers() {
-  const solutions = [
-    {
-      icon: CloudSun,
-      title: 'Weather Updates',
-      description: 'Real-time weather forecasts and alerts'
-    },
-    {
-      icon: BarChart3,
-      title: 'Market Prices',
-      description: 'Live commodity prices and trends'
-    },
-    {
-      icon: Tractor,
-      title: 'Farm Equipment',
-      description: 'Rental and purchase platforms'
-    },
-    {
-      icon: GraduationCap,
-      title: 'Training',
-      description: 'Modern farming techniques and tips'
-    }
-  ];
-
-  // Top MSP Crops 2024-25 based on actual government data
-  const mspCrops = [
-    { crop: 'Moong', msp: '₹8,558', season: 'Kharif', type: 'Pulse' },
-    { crop: 'Sesamum', msp: '₹8,635', season: 'Kharif', type: 'Oilseed' },
-    { crop: 'Nigerseed', msp: '₹7,734', season: 'Kharif', type: 'Oilseed' },
-    { crop: 'Cotton (Long)', msp: '₹7,020', season: 'Kharif', type: 'Commercial' },
-    { crop: 'Tur/Arhar', msp: '₹7,000', season: 'Kharif', type: 'Pulse' },
-    { crop: 'Urad', msp: '₹6,950', season: 'Kharif', type: 'Pulse' },
-    { crop: 'Sunflower', msp: '₹6,760', season: 'Kharif', type: 'Oilseed' },
-    { crop: 'Cotton (Medium)', msp: '₹6,620', season: 'Kharif', type: 'Commercial' },
-    { crop: 'Groundnut', msp: '₹6,377', season: 'Kharif', type: 'Oilseed' },
-    { crop: 'Soyabean', msp: '₹4,600', season: 'Kharif', type: 'Oilseed' },
-    { crop: 'Paddy (Common)', msp: '₹2,183', season: 'Kharif', type: 'Cereal' },
-    { crop: 'Bajra', msp: '₹2,500', season: 'Kharif', type: 'Cereal' },
-    { crop: 'Maize', msp: '₹2,090', season: 'Kharif', type: 'Cereal' }
-  ];
-
-    
-
-  const weatherServices = [
-    {
-      icon: CloudSun,
-      title: 'Daily Weather',
-      description: '7-day detailed weather forecast',
-      features: ['Temperature trends', 'Rainfall predictions', 'Wind speed & direction', 'Humidity levels']
-    },
-    {
-      icon: Droplets,
-      title: 'Rainfall Alerts',
-      description: 'Real-time rain and flood warnings',
-      features: ['Heavy rain alerts', 'Drought warnings', 'Irrigation timing', 'Water conservation tips']
-    },
-    {
-      icon: Thermometer,
-      title: 'Temperature Monitoring',
-      description: 'Heat wave and cold wave alerts',
-      features: ['Crop stress indicators', 'Optimal planting times', 'Harvest timing', 'Storage conditions']
-    }
-  ];
-
-  const farmingTechniques = [
-    {
-      icon: Droplets,
-      title: 'Water Management',
-      description: 'Efficient irrigation and water conservation methods',
-      techniques: ['Drip irrigation setup', 'Rainwater harvesting', 'Soil moisture monitoring', 'Water-efficient crops']
-    },
-    {
-      icon: Bug,
-      title: 'Pest Control',
-      description: 'Natural and chemical pest management solutions',
-      techniques: ['Organic pesticides', 'Beneficial insects', 'Crop rotation', 'Integrated pest management']
-    },
-    {
-      icon: Package,
-      title: 'Soil Health',
-      description: 'Soil testing and fertility improvement',
-      techniques: ['Soil pH testing', 'Organic composting', 'Micronutrient management', 'Cover crops']
-    },
-    {
-      icon: Tractor,
-      title: 'Modern Equipment',
-      description: 'Latest farming technology and machinery',
-      techniques: ['Precision farming tools', 'Drone monitoring', 'GPS-guided tractors', 'Automated irrigation']
-    }
-  ];
-
-  const governmentSchemes = [
-    {
-      title: 'PM-KISAN',
-      description: 'Direct income support of ₹6,000 per year to farmer families',
-      benefit: '₹2,000 every 4 months',
-      eligibility: 'All landholding farmer families'
-    },
-    {
-      title: 'Crop Insurance (PMFBY)',
-      description: 'Comprehensive crop insurance against natural calamities',
-      benefit: 'Up to 90% premium subsidy',
-      eligibility: 'All farmers growing notified crops'
-    },
-    {
-      title: 'KCC (Kisan Credit Card)',
-      description: 'Easy credit access for farming and allied activities',
-      benefit: 'Interest subsidy up to 7%',
-      eligibility: 'All farmers with valid land records'
-    },
-    {
-      title: 'Soil Health Card',
-      description: 'Free soil testing and nutrient recommendations',
-      benefit: 'Customized fertilizer recommendations',
-      eligibility: 'All farmers with agricultural land'
-    }
-  ];
-
-   const cropRecommendations: Record<string, string> = {
-    January: 'Wheat',
-    February: 'Barley',
-    March: 'Maize',
-    April: 'Sunflower',
-    May: 'Cotton',
-    June: 'Paddy',
-    July: 'Soyabean',
-    August: 'Groundnut',
-    September: 'Bajra',
-    October: 'Sorghum (Jowar)',
-    November: 'Chickpea (Gram)',
-    December: 'Mustard'
-  };
-
-  const getCurrentMonthCrop = () => {
-    const monthName = new Date().toLocaleString('default', { month: 'long' });
-    return {
-      month: monthName,
-      crop: cropRecommendations[monthName] ?? 'No recommendation available'
-    };
-  };
-
-  const { month: currentMonth, crop: bestCrop } = getCurrentMonthCrop();
-}
   return (
+    <>
       {/* Weather Services */}
       <section className="py-16 bg-[#2a2c37]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -179,8 +41,7 @@ export default function Farmers() {
           </div>
         </div>
       </section>
-    
-    <div>
+
       {/* Header Section */}
       <section className="py-16 bg-[#2a2c37]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -209,22 +70,22 @@ export default function Farmers() {
         </div>
       </section>
 
-    {/* Best Crop for the Month */}
-<section className="py-16 bg-[#2a2c37]">
-  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 className="text-3xl font-bold text-white mb-4">Best Crop for {currentMonth}</h2>
-    <p className="text-lg text-gray-300 mb-6">
-      Based on seasonal conditions and farming trends, the recommended crop for this month is:
-    </p>
-    <div className="inline-block bg-[#3a3c47] border border-gray-600 p-6 rounded-lg shadow-md">
-      <h3 className="text-2xl font-semibold text-green-400">{bestCrop}</h3>
-      <p className="text-gray-300 mt-2">
-        Consider planting or preparing for this crop to optimize your yield.
-      </p>
-    </div>
-  </div>
-</section>
-  
+      {/* Best Crop for the Month */}
+      <section className="py-16 bg-[#2a2c37]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">Best Crop for {currentMonth}</h2>
+          <p className="text-lg text-gray-300 mb-6">
+            Based on seasonal conditions and farming trends, the recommended crop for this month is:
+          </p>
+          <div className="inline-block bg-[#3a3c47] border border-gray-600 p-6 rounded-lg shadow-md">
+            <h3 className="text-2xl font-semibold text-green-400">{bestCrop}</h3>
+            <p className="text-gray-300 mt-2">
+              Consider planting or preparing for this crop to optimize your yield.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* MSP Prices Section */}
       <section className="py-16 bg-[#2a2c37]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -258,40 +119,6 @@ export default function Farmers() {
               <BarChart3 className="mr-2" size={16} />
               View All MSP Rates
             </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Weather Services */}
-      <section className="py-16 bg-[#2a2c37]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Weather & Climate Services</h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Advanced weather monitoring and alerts to help you make informed farming decisions
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {weatherServices.map(({ icon: Icon, title, description, features }, index) => (
-              <Card key={index} className="bg-[#3a3c47] hover:shadow-lg transition-shadow border-gray-600">
-                <CardContent className="p-6">
-                  <div className="text-center mb-4">
-                    <Icon className="text-blue-400 mx-auto mb-3" size={40} />
-                    <h3 className="font-semibold text-white mb-2">{title}</h3>
-                    <p className="text-gray-300 text-sm mb-4">{description}</p>
-                  </div>
-                  <ul className="space-y-2">
-                    {features.map((feature, idx) => (
-                      <li key={idx} className="text-gray-300 text-sm flex items-center">
-                        <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
           </div>
         </div>
       </section>
@@ -374,6 +201,6 @@ export default function Farmers() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }
