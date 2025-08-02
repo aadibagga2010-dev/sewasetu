@@ -200,6 +200,42 @@ export default function Farmers() {
           </div>
         </div>
       </section>
+  {/* MSP Prices Section */}
+      <section className="py-16 bg-[#2a2c37]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Minimum Support Price (MSP) 2024-25</h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              Government guaranteed minimum prices for major crops to ensure fair income for farmers
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-16">
+            {mspCrops.slice(0, 12).map(({ crop, msp, season, type }, index) => (
+              <Card key={index} className="bg-[#3a3c47] hover:shadow-lg transition-shadow border-gray-600">
+                <CardContent className="p-4">
+                  <div className="text-center">
+                    <h3 className="font-semibold text-white mb-2">{crop}</h3>
+                    <div className="text-2xl font-bold text-green-400 mb-2">{msp}</div>
+                    <div className="text-xs text-gray-400 mb-1">per quintal</div>
+                    <div className="flex justify-between text-xs">
+                      <span className="bg-blue-500/20 text-blue-400 px-2 py-1 rounded">{season}</span>
+                      <span className="bg-purple-500/20 text-purple-400 px-2 py-1 rounded">{type}</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Button className="bg-green-600 hover:bg-green-700 text-white">
+              <BarChart3 className="mr-2" size={16} />
+              View All MSP Rates
+            </Button>
+          </div>
+        </div>
+      </section>
 
       {/* MSP Prices Section */}
       <section className="py-16 bg-[#2a2c37]">
