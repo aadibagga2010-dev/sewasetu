@@ -43,6 +43,25 @@ export default function Farmers() {
     { crop: 'Maize', msp: '₹2,090', season: 'Kharif', type: 'Cereal' }
   ];
 
+     // Best Crops to grow 
+  const mspCrops = [
+    { crop: 'January', msp: '', season: 'Kharif', type: 'Pulse' },
+    { crop: 'Sesamum', msp: '₹8,635', season: 'Kharif', type: 'Oilseed' },
+    { crop: 'Nigerseed', msp: '₹7,734', season: 'Kharif', type: 'Oilseed' },
+    { crop: 'Cotton (Long)', msp: '₹7,020', season: 'Kharif', type: 'Commercial' },
+    { crop: 'Tur/Arhar', msp: '₹7,000', season: 'Kharif', type: 'Pulse' },
+    { crop: 'Urad', msp: '₹6,950', season: 'Kharif', type: 'Pulse' },
+    { crop: 'Sunflower', msp: '₹6,760', season: 'Kharif', type: 'Oilseed' },
+    { crop: 'Cotton (Medium)', msp: '₹6,620', season: 'Kharif', type: 'Commercial' },
+    { crop: 'Groundnut', msp: '₹6,377', season: 'Kharif', type: 'Oilseed' },
+    { crop: 'Soyabean', msp: '₹4,600', season: 'Kharif', type: 'Oilseed' },
+    { crop: 'Paddy (Common)', msp: '₹2,183', season: 'Kharif', type: 'Cereal' },
+    { crop: 'Bajra', msp: '₹2,500', season: 'Kharif', type: 'Cereal' },
+    { crop: 'Maize', msp: '₹2,090', season: 'Kharif', type: 'Cereal' }
+  ];
+
+  
+
   const weatherServices = [
     {
       icon: CloudSun,
@@ -119,6 +138,40 @@ export default function Farmers() {
   ];
 
   return (
+      {/* Weather Services */}
+      <section className="py-16 bg-[#2a2c37]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Weather & Climate Services</h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              Advanced weather monitoring and alerts to help you make informed farming decisions
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {weatherServices.map(({ icon: Icon, title, description, features }, index) => (
+              <Card key={index} className="bg-[#3a3c47] hover:shadow-lg transition-shadow border-gray-600">
+                <CardContent className="p-6">
+                  <div className="text-center mb-4">
+                    <Icon className="text-blue-400 mx-auto mb-3" size={40} />
+                    <h3 className="font-semibold text-white mb-2">{title}</h3>
+                    <p className="text-gray-300 text-sm mb-4">{description}</p>
+                  </div>
+                  <ul className="space-y-2">
+                    {features.map((feature, idx) => (
+                      <li key={idx} className="text-gray-300 text-sm flex items-center">
+                        <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+    
     <div>
       {/* Header Section */}
       <section className="py-16 bg-[#2a2c37]">
