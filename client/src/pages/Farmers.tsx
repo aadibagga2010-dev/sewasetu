@@ -33,6 +33,120 @@ October: 'Sorghum (Jowar)',
 November: 'Chickpea (Gram)',
 December: 'Mustard',
 };
+   const solutions = [
+    {
+      icon: CloudSun,
+      title: 'Weather Updates',
+      description: 'Real-time weather forecasts and alerts'
+    },
+    {
+      icon: BarChart3,
+      title: 'Market Prices',
+      description: 'Live commodity prices and trends'
+    },
+    {
+      icon: Tractor,
+      title: 'Farm Equipment',
+      description: 'Rental and purchase platforms'
+    },
+    {
+      icon: GraduationCap,
+      title: 'Training',
+      description: 'Modern farming techniques and tips'
+    }
+  ];
+
+  // Top MSP Crops 2024-25 based on actual government data
+  const mspCrops = [
+    { crop: 'Moong', msp: '₹8,558', season: 'Kharif', type: 'Pulse' },
+    { crop: 'Sesamum', msp: '₹8,635', season: 'Kharif', type: 'Oilseed' },
+    { crop: 'Nigerseed', msp: '₹7,734', season: 'Kharif', type: 'Oilseed' },
+    { crop: 'Cotton (Long)', msp: '₹7,020', season: 'Kharif', type: 'Commercial' },
+    { crop: 'Tur/Arhar', msp: '₹7,000', season: 'Kharif', type: 'Pulse' },
+    { crop: 'Urad', msp: '₹6,950', season: 'Kharif', type: 'Pulse' },
+    { crop: 'Sunflower', msp: '₹6,760', season: 'Kharif', type: 'Oilseed' },
+    { crop: 'Cotton (Medium)', msp: '₹6,620', season: 'Kharif', type: 'Commercial' },
+    { crop: 'Groundnut', msp: '₹6,377', season: 'Kharif', type: 'Oilseed' },
+    { crop: 'Soyabean', msp: '₹4,600', season: 'Kharif', type: 'Oilseed' },
+    { crop: 'Paddy (Common)', msp: '₹2,183', season: 'Kharif', type: 'Cereal' },
+    { crop: 'Bajra', msp: '₹2,500', season: 'Kharif', type: 'Cereal' },
+    { crop: 'Maize', msp: '₹2,090', season: 'Kharif', type: 'Cereal' }
+  ];
+
+  const weatherServices = [
+    {
+      icon: CloudSun,
+      title: 'Daily Weather',
+      description: '7-day detailed weather forecast',
+      features: ['Temperature trends', 'Rainfall predictions', 'Wind speed & direction', 'Humidity levels']
+    },
+    {
+      icon: Droplets,
+      title: 'Rainfall Alerts',
+      description: 'Real-time rain and flood warnings',
+      features: ['Heavy rain alerts', 'Drought warnings', 'Irrigation timing', 'Water conservation tips']
+    },
+    {
+      icon: Thermometer,
+      title: 'Temperature Monitoring',
+      description: 'Heat wave and cold wave alerts',
+      features: ['Crop stress indicators', 'Optimal planting times', 'Harvest timing', 'Storage conditions']
+    }
+  ];
+
+  const farmingTechniques = [
+    {
+      icon: Droplets,
+      title: 'Water Management',
+      description: 'Efficient irrigation and water conservation methods',
+      techniques: ['Drip irrigation setup', 'Rainwater harvesting', 'Soil moisture monitoring', 'Water-efficient crops']
+    },
+    {
+      icon: Bug,
+      title: 'Pest Control',
+      description: 'Natural and chemical pest management solutions',
+      techniques: ['Organic pesticides', 'Beneficial insects', 'Crop rotation', 'Integrated pest management']
+    },
+    {
+      icon: Package,
+      title: 'Soil Health',
+      description: 'Soil testing and fertility improvement',
+      techniques: ['Soil pH testing', 'Organic composting', 'Micronutrient management', 'Cover crops']
+    },
+    {
+      icon: Tractor,
+      title: 'Modern Equipment',
+      description: 'Latest farming technology and machinery',
+      techniques: ['Precision farming tools', 'Drone monitoring', 'GPS-guided tractors', 'Automated irrigation']
+    }
+  ];
+
+  const governmentSchemes = [
+    {
+      title: 'PM-KISAN',
+      description: 'Direct income support of ₹6,000 per year to farmer families',
+      benefit: '₹2,000 every 4 months',
+      eligibility: 'All landholding farmer families'
+    },
+    {
+      title: 'Crop Insurance (PMFBY)',
+      description: 'Comprehensive crop insurance against natural calamities',
+      benefit: 'Up to 90% premium subsidy',
+      eligibility: 'All farmers growing notified crops'
+    },
+    {
+      title: 'KCC (Kisan Credit Card)',
+      description: 'Easy credit access for farming and allied activities',
+      benefit: 'Interest subsidy up to 7%',
+      eligibility: 'All farmers with valid land records'
+    },
+    {
+      title: 'Soil Health Card',
+      description: 'Free soil testing and nutrient recommendations',
+      benefit: 'Customized fertilizer recommendations',
+      eligibility: 'All farmers with agricultural land'
+    }
+  ];
 
 const getCurrentMonthCrop = () => {
 const monthName = new Date().toLocaleString('default', { month: 'long' });
