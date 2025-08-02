@@ -220,7 +220,7 @@ export default function Home() {
                   <p className="text-gray-300 mb-4">
                     {description}
                   </p>
-                  <Link href={https://www.youtube.com/watch?v=qIH6B7-Z5PM} className={`${linkColor} font-medium flex items-center`}>
+                  <Link href={"https://www.youtube.com/watch?v=qIH6B7-Z5PM"} className={`${linkColor} font-medium flex items-center`}>
                     {t('home.categories.learnMore')} <ArrowRight className="ml-2" size={16} />
                   </Link>
                 </CardContent>
