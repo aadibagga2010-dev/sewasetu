@@ -120,6 +120,34 @@ export default function Farmers() {
     }
   ];
 
+  export default function Farmers() {
+  const cropRecommendations = {
+    January: 'Wheat',
+    February: 'Barley',
+    March: 'Maize',
+    April: 'Sunflower',
+    May: 'Cotton',
+    June: 'Paddy',
+    July: 'Soyabean',
+    August: 'Groundnut',
+    September: 'Bajra',
+    October: 'Sorghum (Jowar)',
+    November: 'Chickpea (Gram)',
+    December: 'Mustard'
+  };
+
+  const getCurrentMonthCrop = () => {
+    const monthName = new Date().toLocaleString('default', { month: 'long' });
+    return {
+      name: monthName,
+      crop: cropRecommendations[monthName] || 'No recommendation available'
+    };
+  };
+
+  const { name: currentMonth, crop: bestCrop } = getCurrentMonthCrop();
+
+  // ...rest of your existing code
+}
   return (
       {/* Weather Services */}
       <section className="py-16 bg-[#2a2c37]">
@@ -183,7 +211,23 @@ export default function Farmers() {
           </div>
         </div>
       </section>
- 
+
+    // Inside the return of your component
+const { name: currentMonth, crop: bestCrop } = getCurrentMonthCrop();
+
+<section className="py-16 bg-[#2a2c37]">
+  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 className="text-3xl font-bold text-white mb-4">Best Crop for {currentMonth}</h2>
+    <p className="text-lg text-gray-300 mb-6">
+      Based on seasonal conditions and farming trends, the recommended crop for this month is:
+    </p>
+    <div className="inline-block bg-[#3a3c47] border border-gray-600 p-6 rounded-lg shadow-md">
+      <h3 className="text-2xl font-semibold text-green-400">{bestCrop}</h3>
+      <p className="text-gray-300 mt-2">Consider planting or preparing for this crop to optimize your yield.</p>
+    </div>
+  </div>
+</section>
+  
       {/* MSP Prices Section */}
       <section className="py-16 bg-[#2a2c37]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
